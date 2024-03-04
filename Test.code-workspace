@@ -1,0 +1,613 @@
+{
+	"folders": [
+		{
+			"name": "Test",
+			"path": "."
+		},
+		{
+			"name": "UE5",
+			"path": "D:\\UE_5.3"
+		}
+	],
+	"settings": {
+		"typescript.tsc.autoDetect": "off",
+		"npm.autoDetect": "off"
+	},
+	"extensions": {
+		"recommendations": [
+			"ms-vscode.cpptools",
+			"ms-dotnettools.csharp"
+		]
+	},
+	"tasks": {
+		"version": "2.0.0",
+		"tasks": [
+			{
+				"label": "Test Win64 Debug Build",
+				"group": "build",
+				"command": "Engine\\Build\\BatchFiles\\Build.bat",
+				"args": [
+					"Test",
+					"Win64",
+					"Debug",
+					"D:\\WORK\\Test\\Test.uproject",
+					"-waitmutex"
+				],
+				"problemMatcher": "$msCompile",
+				"type": "shell",
+				"options": {
+					"cwd": "D:\\UE_5.3"
+				}
+			},
+			{
+				"label": "Test Win64 Debug Rebuild",
+				"group": "build",
+				"command": "Engine\\Build\\BatchFiles\\Build.bat",
+				"args": [
+					"Test",
+					"Win64",
+					"Debug",
+					"D:\\WORK\\Test\\Test.uproject",
+					"-waitmutex"
+				],
+				"problemMatcher": "$msCompile",
+				"dependsOn": [
+					"Test Win64 Debug Clean"
+				],
+				"type": "shell",
+				"options": {
+					"cwd": "D:\\UE_5.3"
+				}
+			},
+			{
+				"label": "Test Win64 Debug Clean",
+				"group": "build",
+				"command": "Engine\\Build\\BatchFiles\\Clean.bat",
+				"args": [
+					"Test",
+					"Win64",
+					"Debug",
+					"D:\\WORK\\Test\\Test.uproject",
+					"-waitmutex"
+				],
+				"problemMatcher": "$msCompile",
+				"type": "shell",
+				"options": {
+					"cwd": "D:\\UE_5.3"
+				}
+			},
+			{
+				"label": "Test Win64 DebugGame Build",
+				"group": "build",
+				"command": "Engine\\Build\\BatchFiles\\Build.bat",
+				"args": [
+					"Test",
+					"Win64",
+					"DebugGame",
+					"D:\\WORK\\Test\\Test.uproject",
+					"-waitmutex"
+				],
+				"problemMatcher": "$msCompile",
+				"type": "shell",
+				"options": {
+					"cwd": "D:\\UE_5.3"
+				}
+			},
+			{
+				"label": "Test Win64 DebugGame Rebuild",
+				"group": "build",
+				"command": "Engine\\Build\\BatchFiles\\Build.bat",
+				"args": [
+					"Test",
+					"Win64",
+					"DebugGame",
+					"D:\\WORK\\Test\\Test.uproject",
+					"-waitmutex"
+				],
+				"problemMatcher": "$msCompile",
+				"dependsOn": [
+					"Test Win64 DebugGame Clean"
+				],
+				"type": "shell",
+				"options": {
+					"cwd": "D:\\UE_5.3"
+				}
+			},
+			{
+				"label": "Test Win64 DebugGame Clean",
+				"group": "build",
+				"command": "Engine\\Build\\BatchFiles\\Clean.bat",
+				"args": [
+					"Test",
+					"Win64",
+					"DebugGame",
+					"D:\\WORK\\Test\\Test.uproject",
+					"-waitmutex"
+				],
+				"problemMatcher": "$msCompile",
+				"type": "shell",
+				"options": {
+					"cwd": "D:\\UE_5.3"
+				}
+			},
+			{
+				"label": "Test Win64 Development Build",
+				"group": "build",
+				"command": "Engine\\Build\\BatchFiles\\Build.bat",
+				"args": [
+					"Test",
+					"Win64",
+					"Development",
+					"D:\\WORK\\Test\\Test.uproject",
+					"-waitmutex"
+				],
+				"problemMatcher": "$msCompile",
+				"type": "shell",
+				"options": {
+					"cwd": "D:\\UE_5.3"
+				}
+			},
+			{
+				"label": "Test Win64 Development Rebuild",
+				"group": "build",
+				"command": "Engine\\Build\\BatchFiles\\Build.bat",
+				"args": [
+					"Test",
+					"Win64",
+					"Development",
+					"D:\\WORK\\Test\\Test.uproject",
+					"-waitmutex"
+				],
+				"problemMatcher": "$msCompile",
+				"dependsOn": [
+					"Test Win64 Development Clean"
+				],
+				"type": "shell",
+				"options": {
+					"cwd": "D:\\UE_5.3"
+				}
+			},
+			{
+				"label": "Test Win64 Development Clean",
+				"group": "build",
+				"command": "Engine\\Build\\BatchFiles\\Clean.bat",
+				"args": [
+					"Test",
+					"Win64",
+					"Development",
+					"D:\\WORK\\Test\\Test.uproject",
+					"-waitmutex"
+				],
+				"problemMatcher": "$msCompile",
+				"type": "shell",
+				"options": {
+					"cwd": "D:\\UE_5.3"
+				}
+			},
+			{
+				"label": "Test Win64 Test Build",
+				"group": "build",
+				"command": "Engine\\Build\\BatchFiles\\Build.bat",
+				"args": [
+					"Test",
+					"Win64",
+					"Test",
+					"D:\\WORK\\Test\\Test.uproject",
+					"-waitmutex"
+				],
+				"problemMatcher": "$msCompile",
+				"type": "shell",
+				"options": {
+					"cwd": "D:\\UE_5.3"
+				}
+			},
+			{
+				"label": "Test Win64 Test Rebuild",
+				"group": "build",
+				"command": "Engine\\Build\\BatchFiles\\Build.bat",
+				"args": [
+					"Test",
+					"Win64",
+					"Test",
+					"D:\\WORK\\Test\\Test.uproject",
+					"-waitmutex"
+				],
+				"problemMatcher": "$msCompile",
+				"dependsOn": [
+					"Test Win64 Test Clean"
+				],
+				"type": "shell",
+				"options": {
+					"cwd": "D:\\UE_5.3"
+				}
+			},
+			{
+				"label": "Test Win64 Test Clean",
+				"group": "build",
+				"command": "Engine\\Build\\BatchFiles\\Clean.bat",
+				"args": [
+					"Test",
+					"Win64",
+					"Test",
+					"D:\\WORK\\Test\\Test.uproject",
+					"-waitmutex"
+				],
+				"problemMatcher": "$msCompile",
+				"type": "shell",
+				"options": {
+					"cwd": "D:\\UE_5.3"
+				}
+			},
+			{
+				"label": "Test Win64 Shipping Build",
+				"group": "build",
+				"command": "Engine\\Build\\BatchFiles\\Build.bat",
+				"args": [
+					"Test",
+					"Win64",
+					"Shipping",
+					"D:\\WORK\\Test\\Test.uproject",
+					"-waitmutex"
+				],
+				"problemMatcher": "$msCompile",
+				"type": "shell",
+				"options": {
+					"cwd": "D:\\UE_5.3"
+				}
+			},
+			{
+				"label": "Test Win64 Shipping Rebuild",
+				"group": "build",
+				"command": "Engine\\Build\\BatchFiles\\Build.bat",
+				"args": [
+					"Test",
+					"Win64",
+					"Shipping",
+					"D:\\WORK\\Test\\Test.uproject",
+					"-waitmutex"
+				],
+				"problemMatcher": "$msCompile",
+				"dependsOn": [
+					"Test Win64 Shipping Clean"
+				],
+				"type": "shell",
+				"options": {
+					"cwd": "D:\\UE_5.3"
+				}
+			},
+			{
+				"label": "Test Win64 Shipping Clean",
+				"group": "build",
+				"command": "Engine\\Build\\BatchFiles\\Clean.bat",
+				"args": [
+					"Test",
+					"Win64",
+					"Shipping",
+					"D:\\WORK\\Test\\Test.uproject",
+					"-waitmutex"
+				],
+				"problemMatcher": "$msCompile",
+				"type": "shell",
+				"options": {
+					"cwd": "D:\\UE_5.3"
+				}
+			},
+			{
+				"label": "TestEditor Win64 Debug Build",
+				"group": "build",
+				"command": "Engine\\Build\\BatchFiles\\Build.bat",
+				"args": [
+					"TestEditor",
+					"Win64",
+					"Debug",
+					"D:\\WORK\\Test\\Test.uproject",
+					"-waitmutex"
+				],
+				"problemMatcher": "$msCompile",
+				"type": "shell",
+				"options": {
+					"cwd": "D:\\UE_5.3"
+				}
+			},
+			{
+				"label": "TestEditor Win64 Debug Rebuild",
+				"group": "build",
+				"command": "Engine\\Build\\BatchFiles\\Build.bat",
+				"args": [
+					"TestEditor",
+					"Win64",
+					"Debug",
+					"D:\\WORK\\Test\\Test.uproject",
+					"-waitmutex"
+				],
+				"problemMatcher": "$msCompile",
+				"dependsOn": [
+					"TestEditor Win64 Debug Clean"
+				],
+				"type": "shell",
+				"options": {
+					"cwd": "D:\\UE_5.3"
+				}
+			},
+			{
+				"label": "TestEditor Win64 Debug Clean",
+				"group": "build",
+				"command": "Engine\\Build\\BatchFiles\\Clean.bat",
+				"args": [
+					"TestEditor",
+					"Win64",
+					"Debug",
+					"D:\\WORK\\Test\\Test.uproject",
+					"-waitmutex"
+				],
+				"problemMatcher": "$msCompile",
+				"type": "shell",
+				"options": {
+					"cwd": "D:\\UE_5.3"
+				}
+			},
+			{
+				"label": "TestEditor Win64 DebugGame Build",
+				"group": "build",
+				"command": "Engine\\Build\\BatchFiles\\Build.bat",
+				"args": [
+					"TestEditor",
+					"Win64",
+					"DebugGame",
+					"D:\\WORK\\Test\\Test.uproject",
+					"-waitmutex"
+				],
+				"problemMatcher": "$msCompile",
+				"type": "shell",
+				"options": {
+					"cwd": "D:\\UE_5.3"
+				}
+			},
+			{
+				"label": "TestEditor Win64 DebugGame Rebuild",
+				"group": "build",
+				"command": "Engine\\Build\\BatchFiles\\Build.bat",
+				"args": [
+					"TestEditor",
+					"Win64",
+					"DebugGame",
+					"D:\\WORK\\Test\\Test.uproject",
+					"-waitmutex"
+				],
+				"problemMatcher": "$msCompile",
+				"dependsOn": [
+					"TestEditor Win64 DebugGame Clean"
+				],
+				"type": "shell",
+				"options": {
+					"cwd": "D:\\UE_5.3"
+				}
+			},
+			{
+				"label": "TestEditor Win64 DebugGame Clean",
+				"group": "build",
+				"command": "Engine\\Build\\BatchFiles\\Clean.bat",
+				"args": [
+					"TestEditor",
+					"Win64",
+					"DebugGame",
+					"D:\\WORK\\Test\\Test.uproject",
+					"-waitmutex"
+				],
+				"problemMatcher": "$msCompile",
+				"type": "shell",
+				"options": {
+					"cwd": "D:\\UE_5.3"
+				}
+			},
+			{
+				"label": "TestEditor Win64 Development Build",
+				"group": "build",
+				"command": "Engine\\Build\\BatchFiles\\Build.bat",
+				"args": [
+					"TestEditor",
+					"Win64",
+					"Development",
+					"D:\\WORK\\Test\\Test.uproject",
+					"-waitmutex"
+				],
+				"problemMatcher": "$msCompile",
+				"type": "shell",
+				"options": {
+					"cwd": "D:\\UE_5.3"
+				}
+			},
+			{
+				"label": "TestEditor Win64 Development Rebuild",
+				"group": "build",
+				"command": "Engine\\Build\\BatchFiles\\Build.bat",
+				"args": [
+					"TestEditor",
+					"Win64",
+					"Development",
+					"D:\\WORK\\Test\\Test.uproject",
+					"-waitmutex"
+				],
+				"problemMatcher": "$msCompile",
+				"dependsOn": [
+					"TestEditor Win64 Development Clean"
+				],
+				"type": "shell",
+				"options": {
+					"cwd": "D:\\UE_5.3"
+				}
+			},
+			{
+				"label": "TestEditor Win64 Development Clean",
+				"group": "build",
+				"command": "Engine\\Build\\BatchFiles\\Clean.bat",
+				"args": [
+					"TestEditor",
+					"Win64",
+					"Development",
+					"D:\\WORK\\Test\\Test.uproject",
+					"-waitmutex"
+				],
+				"problemMatcher": "$msCompile",
+				"type": "shell",
+				"options": {
+					"cwd": "D:\\UE_5.3"
+				}
+			}
+		]
+	},
+	"launch": {
+		"version": "0.2.0",
+		"configurations": [
+			{
+				"name": "Launch Test (Debug)",
+				"request": "launch",
+				"program": "D:\\WORK\\Test\\Binaries\\Win64\\UnrealGame-Win64-Debug.exe",
+				"preLaunchTask": "Test Win64 Debug Build",
+				"args": [
+				],
+				"cwd": "D:\\UE_5.3",
+				"stopAtEntry": false,
+				"console": "externalTerminal",
+				"type": "cppvsdbg",
+				"visualizerFile": "D:\\UE_5.3\\Engine\\Extras\\VisualStudioDebugging\\Unreal.natvis",
+				"sourceFileMap": {
+					"D:\\build\\++UE5\\Sync": "D:\\UE_5.3"
+				}
+			},
+			{
+				"name": "Launch Test (DebugGame)",
+				"request": "launch",
+				"program": "D:\\WORK\\Test\\Binaries\\Win64\\UnrealGame-Win64-DebugGame.exe",
+				"preLaunchTask": "Test Win64 DebugGame Build",
+				"args": [
+				],
+				"cwd": "D:\\UE_5.3",
+				"stopAtEntry": false,
+				"console": "externalTerminal",
+				"type": "cppvsdbg",
+				"visualizerFile": "D:\\UE_5.3\\Engine\\Extras\\VisualStudioDebugging\\Unreal.natvis",
+				"sourceFileMap": {
+					"D:\\build\\++UE5\\Sync": "D:\\UE_5.3"
+				}
+			},
+			{
+				"name": "Launch Test (Development)",
+				"request": "launch",
+				"program": "D:\\WORK\\Test\\Binaries\\Win64\\UnrealGame.exe",
+				"preLaunchTask": "Test Win64 Development Build",
+				"args": [
+				],
+				"cwd": "D:\\UE_5.3",
+				"stopAtEntry": false,
+				"console": "externalTerminal",
+				"type": "cppvsdbg",
+				"visualizerFile": "D:\\UE_5.3\\Engine\\Extras\\VisualStudioDebugging\\Unreal.natvis",
+				"sourceFileMap": {
+					"D:\\build\\++UE5\\Sync": "D:\\UE_5.3"
+				}
+			},
+			{
+				"name": "Launch Test (Test)",
+				"request": "launch",
+				"program": "D:\\WORK\\Test\\Binaries\\Win64\\UnrealGame-Win64-Test.exe",
+				"preLaunchTask": "Test Win64 Test Build",
+				"args": [
+				],
+				"cwd": "D:\\UE_5.3",
+				"stopAtEntry": false,
+				"console": "externalTerminal",
+				"type": "cppvsdbg",
+				"visualizerFile": "D:\\UE_5.3\\Engine\\Extras\\VisualStudioDebugging\\Unreal.natvis",
+				"sourceFileMap": {
+					"D:\\build\\++UE5\\Sync": "D:\\UE_5.3"
+				}
+			},
+			{
+				"name": "Launch Test (Shipping)",
+				"request": "launch",
+				"program": "D:\\WORK\\Test\\Binaries\\Win64\\UnrealGame-Win64-Shipping.exe",
+				"preLaunchTask": "Test Win64 Shipping Build",
+				"args": [
+				],
+				"cwd": "D:\\UE_5.3",
+				"stopAtEntry": false,
+				"console": "externalTerminal",
+				"type": "cppvsdbg",
+				"visualizerFile": "D:\\UE_5.3\\Engine\\Extras\\VisualStudioDebugging\\Unreal.natvis",
+				"sourceFileMap": {
+					"D:\\build\\++UE5\\Sync": "D:\\UE_5.3"
+				}
+			},
+			{
+				"name": "Launch TestEditor (Debug)",
+				"request": "launch",
+				"program": "D:\\UE_5.3\\Engine\\Binaries\\Win64\\UnrealEditor-Win64-Debug.exe",
+				"preLaunchTask": "TestEditor Win64 Debug Build",
+				"args": [
+					"D:\\WORK\\Test\\Test.uproject"
+				],
+				"cwd": "D:\\UE_5.3",
+				"stopAtEntry": false,
+				"console": "externalTerminal",
+				"type": "cppvsdbg",
+				"visualizerFile": "D:\\UE_5.3\\Engine\\Extras\\VisualStudioDebugging\\Unreal.natvis",
+				"sourceFileMap": {
+					"D:\\build\\++UE5\\Sync": "D:\\UE_5.3"
+				}
+			},
+			{
+				"name": "Launch TestEditor (DebugGame)",
+				"request": "launch",
+				"program": "D:\\UE_5.3\\Engine\\Binaries\\Win64\\UnrealEditor-Win64-DebugGame.exe",
+				"preLaunchTask": "TestEditor Win64 DebugGame Build",
+				"args": [
+					"D:\\WORK\\Test\\Test.uproject"
+				],
+				"cwd": "D:\\UE_5.3",
+				"stopAtEntry": false,
+				"console": "externalTerminal",
+				"type": "cppvsdbg",
+				"visualizerFile": "D:\\UE_5.3\\Engine\\Extras\\VisualStudioDebugging\\Unreal.natvis",
+				"sourceFileMap": {
+					"D:\\build\\++UE5\\Sync": "D:\\UE_5.3"
+				}
+			},
+			{
+				"name": "Launch TestEditor (Development)",
+				"request": "launch",
+				"program": "D:\\UE_5.3\\Engine\\Binaries\\Win64\\UnrealEditor.exe",
+				"preLaunchTask": "TestEditor Win64 Development Build",
+				"args": [
+					"D:\\WORK\\Test\\Test.uproject"
+				],
+				"cwd": "D:\\UE_5.3",
+				"stopAtEntry": false,
+				"console": "externalTerminal",
+				"type": "cppvsdbg",
+				"visualizerFile": "D:\\UE_5.3\\Engine\\Extras\\VisualStudioDebugging\\Unreal.natvis",
+				"sourceFileMap": {
+					"D:\\build\\++UE5\\Sync": "D:\\UE_5.3"
+				}
+			},
+			{
+				"name": "Generate Project Files",
+				"type": "coreclr",
+				"request": "launch",
+				"preLaunchTask": "UnrealBuildTool Win64 Development Build",
+				"program": "D:\\UE_5.3\\Engine\\Build\\BatchFiles\\RunUBT.bat",
+				"args": [
+					"-projectfiles",
+					"-vscode",
+					"-project=D:\\WORK\\Test\\Test.uproject",
+					"-game",
+					"-engine",
+					"-dotnet"
+				],
+				"console": "externalTerminal",
+				"stopAtEntry": false,
+				"cwd": "D:\\UE_5.3"
+			}
+		]
+	}
+}
